@@ -4,6 +4,8 @@
   margin: auto;
   margin-top: 15px;
   padding: 30px;
+  position: relative;
+  min-height: 130px;
 }
 
 .counter button {

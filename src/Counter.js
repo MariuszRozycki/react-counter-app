@@ -1,14 +1,35 @@
 import "./Counter.css";
+import { useState } from "react";
+import Display from "./components/Display";
+import ButtonsPanel from "./components/ButtonsPanel";
+import Clock from "./components/Clock";
 
 const Counter = (props) => {
-  console.log(props);
-  const counter = Math.floor(Math.random() * 10);
+  const [counter, setCounter] = useState(props.counterInitValue);
+  const [showClock, setShowClock] = useState(true);
+
+  const updateCounter = (action) => {
+    if (action === "add") {
+      setCounter(counter + 1);
+    } else if (action === "reset") {
+      setCounter(props.counterInitValue);
+    } else {
+      setCounter(0);
+    }
+  };
 
   return (
     <div className="counter">
-      <p>Counter: {props.counterInitValue}</p>
-      <div className="buttonsPanel">
-        <button>Add</button>
+      <Display counter={counter} />
+      <ButtonsPanel updateCounter={updateCounter} />
+      <div className="clockWrapper">
+        {showClock ? (
+          <Clock setShowClock={setShowClock} />
+        ) : (
+          <p className="clockControl" onClick={() => setShowClock(true)}>
+            Show Clock
+          </p>
+        )}
       </div>
     </div>
   );
