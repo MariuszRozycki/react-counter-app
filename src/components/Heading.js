@@ -1,5 +1,5 @@
-const Heading = () => {
-  return <h2>React Counter App</h2>;
+const Heading = (props) => {
+  return <h2 className={props.classValue}>{props.text}</h2>;
 };
 
 export default Heading;

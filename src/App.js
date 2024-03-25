@@ -1,13 +1,16 @@
 import "./App.css";
 
 import Heading from "./components/Heading";
+import Counter from "./Counter";
 
 const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <Heading />
+        <Heading text="React Counter App" classValue="red" />
       </header>
+      <Counter counterInitValue={15} />
+      <Counter counterInitValue={108} />
     </div>
   );
 };
