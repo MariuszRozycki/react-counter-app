@@ -9,7 +9,6 @@ const App = () => {
       <header className="App-header">
         <Heading text="React Counter App" classValue="red" />
       </header>
-      <Counter counterInitValue={15} />
       <Counter counterInitValue={108} />
     </div>
   );
