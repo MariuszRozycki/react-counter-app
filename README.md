@@ -1,4 +1,7 @@
 # React Counter App
+## LiveSite: https://counter-app-academy.netlify.app/
+![image](https://github.com/MariuszRozycki/react-counter-app/assets/55709542/bd2b313a-d7ff-413a-a280-0d9a475f64d3)
+
 ## Overview
 This application is a simple React-based counter that allows users to increment a counter by a specified step, reset it to its initial value, or set it to zero. It features a dynamic, digital clock that can be shown or hidden with a click. The app is styled simply and is designed to demonstrate basic React state management and component interaction.
 
